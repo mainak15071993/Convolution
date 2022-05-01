@@ -24,7 +24,7 @@ class convolution_2D:
         '''
         #DoubleFlip the mask
         k = np.flipud(np.fliplr(kernel))
-        #create a numoy array to store the output
+        #create a numpy array to store the output
         output = np.zeros_like(image) 
 
         #create padding
@@ -44,17 +44,4 @@ class convolution_2D:
             if cv2.waitKey(20) & 0xFF == ord('q'):
                 break
         return cv2.destroyAllWindows()
-
-
-if __name__ == '__main__':
-
-    image = '/home/mainak/Pictures/flower.jpeg'
-
-    conv = convolution_2D()
-    im = conv.load_image(image,512,512)
-    conv.display(im)
-    kernel = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]])/9.0
-    output = conv.convolution(im,kernel)
-    conv.display(output)
-
 
