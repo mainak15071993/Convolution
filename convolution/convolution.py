@@ -46,15 +46,3 @@ class convolution_2D:
         return cv2.destroyAllWindows()
 
 
-if __name__ == '__main__':
-
-    image = '/home/mainak/Pictures/beautiful.jpg'
-
-    conv = convolution_2D()
-    im = conv.load_image(image,720,720)
-    conv.display(im)
-    kernel = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]])/9.0
-    output = conv.convolution(im,kernel)
-    conv.display(output)
-
-
