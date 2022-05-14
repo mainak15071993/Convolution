@@ -4,11 +4,16 @@ Kernal can be used as per the user.
 
 Installation:
 git clone https://github.com/mainak15071993/Convolution/convolution_scratch/
+
 cd convolution_scratch
+
 pip install -e.
 
+
 Usage:
+
 import convolution.convolution_2d as c
+
 conv = c.Convolution_2D()
 
 #Use the other methods inside the class.
