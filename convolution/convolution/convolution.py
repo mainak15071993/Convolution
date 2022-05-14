@@ -45,17 +45,3 @@ class convolution_2D:
                 break
         return cv2.destroyAllWindows()
 
-
-if __name__ == '__main__':
-
-    image = '/home/mainak/Downloads/emma.jpg'
-
-    conv = convolution_2D()
-    im = conv.load_image(image,720,720)
-    conv.display(im)
-    kernel = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]])/9.0
-    #kernel = np.array([[0,1,0],[1,-4,1],[0,1,0]])
-    output = conv.convolution(im,kernel)
-    conv.display(output)
-
-
